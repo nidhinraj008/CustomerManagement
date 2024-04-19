@@ -1,0 +1,52 @@
+$borderColor: #3f3f3f53;
+
+.layout-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    .top-bar {
+        width: 100vw;
+        box-shadow: 0 0 15px 0px #59565686;
+        background-color: #2b135c;
+        // background-color: #5c2935;
+    
+        .main-heading {
+            font-weight: 700;
+            color: #FFF;
+        }
+    
+        .navigations {
+            a:hover {
+                color: #F00;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .main-body {
+        overflow-y: auto;
+    }
+}
+
+.custom-toast {
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+    min-width: 500px;
+    height: 80px;
+    // color: #FFF;
+
+    .content {
+        max-width: 400px; 
+        height: 100%;
+        overflow: hidden;
+    }
+    .close-icon {
+
+    }
+}

@@ -1,0 +1,28 @@
+$borderColor: #3f3f3f53;
+
+.list-item {
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0px #3e3c3c57;
+}
+
+.search-input {
+    background-color: #FFFFFF;
+    border: 1px solid $borderColor;
+    border-radius: 25px;
+    // height: 40px;
+
+    .search-icon {
+        color: #888;
+    }
+    .input-box {
+        border: none;
+        outline: none;
+        height: 100%;
+    }
+
+    .clear-icon {
+        color: #888;
+
+    }
+}
+

@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+// Bootstrap 5 import
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+$borderColor: #3f3f3f53;
+
+.main-container {
+    box-shadow: 0 0 5px 0px #3f3f3f53;
+    border-radius: 15px;
+    min-height: 50vh;
+    overflow-x: auto;
+}
+
+.label {
+    color: #555;
+    font-weight: 300;
+}
+
+.value {
+    font-weight: 500;
+    margin-top: -5px;
+    // color: #aaa;
+}
+
+
+.bg-r {
+    background-color: red !important;
+}
+
+.bg-g {
+    background-color: green !important;
+}
+
+.bg-b {
+    background-color: blue !important;
+}
+
+.bg-y {
+    background-color: yellow !important;
+}
+
+.bg-m {
+    background-color: magenta !important;
+}
+
+.bg-c {
+    background-color: cyan !important;
+}
+
+.bg-0 {
+    background-color: #000000 !important;
+}
+
+.bg-1 {
+    background-color: #FFFFFF !important;
+}

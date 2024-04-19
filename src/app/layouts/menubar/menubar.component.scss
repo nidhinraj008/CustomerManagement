@@ -1,0 +1,19 @@
+$borderColor: #3f3f3f53;
+
+.top-bar {
+    width: 100%;
+
+    .page-heading {
+        font-weight: 700;
+        color: #222;
+    }
+    .bread-crumb {
+        font-size: 12px;
+    }
+
+    .navigations {
+        a:hover {
+            color: #F00;
+        }
+    }
+}

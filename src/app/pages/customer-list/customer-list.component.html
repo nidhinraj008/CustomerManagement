@@ -1,0 +1,80 @@
+<app-menubar pageTitle="Customer List" breadCrumbs="CustomerList">
+    <!-- <div class="search-input py-1 px-2">
+        <div class="d-flex align-items-center">
+            <div class="search-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="px-1">
+                <input class="input-box" type="text">
+            </div>
+            <div class="clear-icon">
+                <i class="bi bi-x-lg"></i>
+            </div>
+        </div>
+    </div> -->
+</app-menubar>
+
+<div class="p-5">
+    <div class="main-container p-4">
+        <div class="p-3">
+            <table class="table table-striped table-hover table-bordered">
+                <tr>
+                    <th *ngFor="let head of cols">
+                        {{head.header}}
+                    </th>
+                </tr>
+                <tr *ngFor="let item of customerList; let i = index">
+                    <td *ngFor="let col of cols"> 
+                        <ng-container [ngSwitch]="col.field">
+                            <ng-container *ngSwitchCase="'No'">
+                                <div (click)="goToCustomerDetail(item)" style="cursor: pointer;">
+                                    {{i + 1}}
+                                </div>
+                            </ng-container>
+    
+                            <ng-container *ngSwitchCase="'actions'">
+                                <div class="d-flex">
+                                    <button (click)="selectedCustomer = item" type="button" class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-link" (click)="etitCustomer(item)">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-link" (click)="goToCustomerDetail(item)">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </ng-container>
+    
+                            <ng-container *ngSwitchDefault>
+                                <div (click)="goToCustomerDetail(item)" style="cursor: pointer;">
+                                    {{item[col.field]}}
+                                </div>
+                            </ng-container>
+                        </ng-container>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Do you want to delete "{{selectedCustomer.name}}" from the list?
+            </div>
+            <div class="modal-footer">
+                <button #close type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button (click)="deleteCustomer()" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

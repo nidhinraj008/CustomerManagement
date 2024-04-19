@@ -1,0 +1,44 @@
+<div *ngIf="configService.isShowToast" class="d-flex align-items-center flex-nowrap custom-toast p-3" 
+    [style.background]="configService.toastData.backgroundColor"
+    [style.color]="configService.toastData.color">
+    <div class="" style="font-size: 30px;">
+        <i class="bi {{configService.toastData.icon}}"></i>
+    </div>
+    <div class="px-3 content d-flex align-items-center">
+        {{configService.toastData.message}}
+    </div>
+    <div class="close-icon d-flex align-items-center ms-auto" (click)="hideToast()">
+        <i class="bi bi-x-lg"></i>
+    </div>
+</div>
+
+<div class="layout-container d-flex flex-column">
+    <div class="top-bar d-flex py-3 px-5">
+        <div class="">
+            <h3 class="main-heading m-0">
+                <a routerLink="/CustomerList">
+                    <!-- <i class="bi bi-house-door"></i> -->
+                    Customer Management
+                </a>
+            </h3>
+        </div>
+        <div class="ps-5 d-flex align-items-end navigations">
+            <div class="px-3">
+                <a routerLink="/CustomerList">
+                    <i class="bi bi-card-list"></i>
+                    Customers
+                </a>
+            </div>
+            <div class="px-3">
+                <a routerLink="/CustomerEdit/0">
+                    <i class="bi bi-plus"></i>
+                    Add Customer
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-body">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
