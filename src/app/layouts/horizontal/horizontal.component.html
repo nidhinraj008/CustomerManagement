@@ -1,6 +1,5 @@
 <div *ngIf="configService.isShowToast" class="d-flex align-items-center flex-nowrap custom-toast p-3" 
-    [style.background]="configService.toastData.backgroundColor"
-    [style.color]="configService.toastData.color">
+    [style.background]="configService.toastData.backgroundColor" [style.color]="configService.toastData.color">
     <div class="" style="font-size: 30px;">
         <i class="bi {{configService.toastData.icon}}"></i>
     </div>
